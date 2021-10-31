@@ -21,7 +21,7 @@
         <label for="answer">Введите ответ</label>
         <input type="text" id="answer" name="answer">
         <br>
-        <input type="submit" name="answer" value="Ответить">
+        <input type="submit" value="Ответить">
     </form>
 </body>
 </html>
