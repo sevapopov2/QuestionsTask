@@ -9,7 +9,12 @@
     include 'functions.php';
     ?>
     <h1>Викторина</h1>
-    <form action="questionCheck.php" method="post">
+    <form method="post" action="questionCheck.php?id=<?=$_GET['q']?>">
+    <?php
+    if (array_key_exists('q', $_GET)) {
+        echo getQuestionText($_GET['q']);
+    }
+    ?>
         <label for="answer">Введите ответ</label>
         <input type="text" id="answer" name="answer">
         <br>
