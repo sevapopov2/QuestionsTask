@@ -8,5 +8,9 @@ function getQuestions() {
 }
 
 function getQuestion($id) {
-    return getQuestions()[$id]['question'];
+    foreach (getQuestions() as $question) {
+        if ($question->id == $id) {
+            return $question;
+        }
+    }
 }
