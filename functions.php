@@ -19,8 +19,9 @@ function getQuestionText($id) {
     return getQuestion($id)->question;
 }
 
-function checkQuestion($id $answer) {
+function checkQuestion($id, $answer) {
     return is_array(getQuestion($id)->answer)
     ? in_array($answer, getQuestion($id)->answer)
     : getQuestion($id)->answer == $answer;
 }
+?>
