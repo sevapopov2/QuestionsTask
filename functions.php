@@ -14,3 +14,7 @@ function getQuestion($id) {
         }
     }
 }
+
+function getQuestionText($id) {
+    return getQuestion($id)->question;
+}
