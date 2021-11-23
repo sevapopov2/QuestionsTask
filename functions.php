@@ -7,6 +7,13 @@ function getQuestions($file = "questions.json") {
     return json_decode($fileContent);
 }
 
+function getQuestion($id) {
+    foreach (getQuestions() as $question) {
+        if ($question->id == $id) {
+            return $question;
+        }
+    }
+}
 
 function getQuestionText($id) {
     return getQuestion($id)->question;

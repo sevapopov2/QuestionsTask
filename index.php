@@ -11,7 +11,7 @@
             Здесь вам предстоит ответить на несколько вопросов
             <br>
             Начнём?</p>
-            <form action="questions.php" method="post">
+            <form action="questions.php?q=1" method="post">
                 <input type="submit" name="yes" value="Да!">
             </form>
     </body>
