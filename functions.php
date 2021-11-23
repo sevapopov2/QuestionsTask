@@ -4,7 +4,7 @@ function getQuestions() {
     $f = fopen($fileName, 'r');
     $fileContent = fread($f, filesize($fileName));
     fclose($f);
-    return json_decode($fileContent, true);
+    return json_decode($fileContent);
 }
 
 function getQuestion($id) {
