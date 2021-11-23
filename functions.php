@@ -1,19 +1,12 @@
 <?php
-function getQuestions() {
-    $fileName = "questions.json";
+function getQuestions($file = "questions.json") {
+    $fileName = $file;
     $f = fopen($fileName, 'r');
     $fileContent = fread($f, filesize($fileName));
     fclose($f);
     return json_decode($fileContent);
 }
 
-function getQuestion($id) {
-    foreach (getQuestions() as $question) {
-        if ($question->id == $id) {
-            return $question;
-        }
-    }
-}
 
 function getQuestionText($id) {
     return getQuestion($id)->question;
