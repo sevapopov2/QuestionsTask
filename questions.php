@@ -15,7 +15,9 @@
         echo getQuestionText($_GET['q']);
     }
     ?>
+    <br>
         <label for="answer">Введите ответ</label>
+        <br>
         <input type="text" id="answer" name="answer">
         <br>
         <input type="submit" value="Ответить">
