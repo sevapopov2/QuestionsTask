@@ -13,7 +13,8 @@ include 'functions.php';
             <?php
             foreach (getQuestions() as $question) {
                 echo "<li>{$question->id}</li>
-                <li>{$question->question}</li>";
+                <li>{$question->question}</li>
+                <button class='delete' id='{$question->id}'>Удалить вопрос</button>";
             }
             ?>
         </ul>
