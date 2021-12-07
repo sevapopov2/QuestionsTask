@@ -24,4 +24,13 @@ function checkQuestion($id, $answer) {
     ? in_array($answer, getQuestion($id)->answer)
     : getQuestion($id)->answer == $answer;
 }
+
+function removeQuestion($data, $id) {
+    $resultArray = [];
+    foreach ($data as $question) {
+        if ($question->id != $id) {
+            $resultArray[] = $question;
+        }
+    }
+}
 ?>
